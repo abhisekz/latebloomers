@@ -1,5 +1,26 @@
-$color: yellow;
+// Variables 
 
-body {
-  background-color : $color;
-}
+@import 'variables/colors';
+@import 'variables/variables';
+@import 'base/mixins';
+
+
+// Layout
+
+@import 'layout/base';
+@import 'layout/large';
+@import 'layout/medium';
+@import 'layout/small';
+
+// Base
+
+@import 'base/elements';
+@import 'base/forms';
+@import 'base/typography';
+
+// Components
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/navigation';
+
