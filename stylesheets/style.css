@@ -1,0 +1,13 @@
+/* @import "compass/css3";
+
+@import 'compass';
+
+@include 'global-reset'; 
+
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,900");
+
+body {
+	color: #333;
+} */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:300|Grand+Hotel);

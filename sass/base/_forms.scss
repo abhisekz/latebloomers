@@ -1,0 +1,19 @@
+input[type="submit"], input[type="reset"], input[type="button"], .button {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: $primary-color;
+    border: 0;
+    @include border-radius(0);
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 900;
+    height: 3em;
+    letter-spacing: 0.05em;
+    line-height: 3em;
+    padding: 0 1.75em;
+    text-align: center;
+    text-decoration: none;
+    text-indent: -0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}

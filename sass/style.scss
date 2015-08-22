@@ -1,3 +1,11 @@
+@import "compass/css3";
+
+@import 'compass';
+
+@import 'compass/reset';
+
+@import 'lib/font-awesome';
+
 // Variables 
 
 @import 'variables/colors';
@@ -18,9 +26,16 @@
 @import 'base/forms';
 @import 'base/typography';
 
+// Owl Carousel 
+
+@import 'lib/owl-carousel/owl.carousel';
+
+
 // Components
 
 @import 'components/header';
 @import 'components/footer';
 @import 'components/navigation';
+@import 'components/banner';
+@import 'components/home';
 

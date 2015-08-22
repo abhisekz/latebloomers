@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
         sass = require('gulp-ruby-sass'),
+        compass = require('gulp-compass'),
         autoprefixer = require('gulp-autoprefixer'),
         minifycss = require('gulp-minify-css'),
         rename = require('gulp-rename');
@@ -29,15 +30,18 @@ function notifyLiveReload(event) {
 }
 
 gulp.task('styles', function() {
-  return sass('sass', { style: 'expanded' })
-    .pipe(gulp.dest('css'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('css'));
+  gulp.src('sass/**/*.scss')
+  .pipe(compass({
+  	config_file: './config.rb',
+  	css: 'css',
+  	sass: 'sass',
+  	require: ['susy', 'breakpoint']
+  }))
+
 });
 
 gulp.task('watch', function() {
-  gulp.watch('sass/*.scss', ['styles']);
+  gulp.watch('sass/**/*.scss', ['styles']);
   gulp.watch('*.html', notifyLiveReload);
   gulp.watch('css/*.css', notifyLiveReload);
 });

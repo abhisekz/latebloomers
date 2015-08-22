@@ -1,0 +1,23 @@
+#banner {
+	background: {
+		color : $header-color;
+		image : url(../images/banner.svg);
+		size : 900px 180px;
+		repeat : repeat-x;
+		position: 25% bottom;
+	}
+	padding: 8em 0;
+	text-align: center;
+	h2 {
+		font-size: 2.8em;
+		color: $white;
+	}
+	p {
+		color: $primary-color;
+		font-size: 2em;
+		margin: 1em;
+	}
+	.button {
+		margin-top: 30px;
+	}
+}
