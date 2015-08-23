@@ -11,30 +11,30 @@
 </head>
 
 <body>
-    <!-- Header section starts -->
-    <header>
-        <!-- Main document header and it links to the home page always-->
-        <h1><a href="index.html" class="logo">Late Bloomers Rehabiliation Centre</a></h1>
-    </header>
-    <!-- Header section ends -->
-    <!-- Navigation section starts -->
-    <nav>
-    	<h2>FAQ</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a>
-                <ul>
-                    <li><a href="faq.html">Faq</a></li>
+    <nav class="header-wrap navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+                    <h1 class="navbar-brand"><a href="index.html" class="logo">Late Bloomers <span>Rehabiliation Centre</span></a></h1>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="#">About Us</a></li>
+                    <li><a href="treatment.html">Treatment</a></li>
+                    <li><a href="qna.html">Child care</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
-            </li>
-            <li><a href="treatment.html">Treatment</a></li>
-            <li><a href="qna.html">Q&amp;A</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
     </nav>
-    <!-- Navigation section ends -->
-
-    <!-- Main content section starts -->
     <main>
         <dl>
 
@@ -114,21 +114,96 @@
         </dl>
         <small>Source: National Institute on Drug Abuse; National Institutes of Health; U.S. Department of Health and Human Services.</small>
     </main>
-    <!-- Main content section ends -->
-
-    <!-- Aside content starts here -->
-    <aside>
-        <h2>Are you addicted ? </h2>
-        <h2>Ask Us </h2>
-        <h2>FAQ</h2>
+        <aside class="home-aside">
+        <div class="container">
+            <div class="newsletter-section">
+                <h2 class="section-hdr">Stay updated</h2>
+                <p>Subscribe to our newsletter and stay updated about our activties and our steps taken to make the world free of addictions.</p>
+                <form action="newsletter">
+                    <section class="newsletter">
+                        <input type="email" placeholder="your email">
+                        <button class="button open-form">Sign Up</button>
+                    </section>
+                </form>
+            </div>
+            <div class="extra-section">
+                <section>
+                    <div class="box">
+                        <i class="user"></i>
+                        <h2>Are you addicted ? </h2>
+                    </div>
+                </section>
+                <section>
+                    <div class="box">
+                        <i class="ask"></i>
+                        <h2>Ask Us </h2>
+                    </div>
+                </section>
+                <section>
+                    <div class="box">
+                        <i class="faq"></i>
+                        <h2>FAQ</h2>
+                    </div>
+                </section>
+            </div>
+        </div>
     </aside>
     <!-- Aside content ends here -->
-
     <!-- Footer section starts -->
     <footer>
-
+        <div class="container">
+            <div class="contact-info">
+                <h4>
+                    Late Bloomers Rehabilation Centre <br>
+                </h4> 8/1/3A Bose Para Lane,
+                <br> Kolkata 700003.
+                <br>
+            </div>
+        </div>
     </footer>
     <!-- Footer section ends -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+    $(function() {
+        $('.open-form').on('click', function() {
+            $('.newsletter').addClass('open');
+            $('.newsletter').find('input').focus();
+            return false;
+        });
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            dots: true,
+            autoplay: true,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: false
+                }
+            }
+        });
+    })
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 420) {
+            $('.header-wrap').addClass("sticky");
+        } else {
+            $('.header-wrap').removeClass("sticky");
+        }
+    });
+    </script>
 </body>
 
 </html>

@@ -1,27 +1,59 @@
-nav {
-    h2 {
-        @include breakpoint($tablet) {
-        	display: none;
+.nav {
+     @media (min-width: $screen-sm-min) {
+        float: right;
+        margin: 0 -15px;
+    }
+    
+    
+    > li {
+        
+        a {
+            font-size: 1em;
+            line-height: 2.5em;
+
+            @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                    padding: 15px 8px;
+                    font-size: 1em;
+                }
+        }
+        > ul {
+            display: none;
+        }
+        &:last-of-type {
+            @media(min-width: $screen-sm-min){
+                padding-right:0;
+            }
         }
     }
+}
+.navbar {
+    .icon-bar {
+        background: $brand-primary;
+    }
+}
+
+
+/* .nav {
+    float: right;
     ul {
         @include clearfix();
         float: right;
         li {
             display: inline-block;
-            @include pad(15px);
+            
             a {
-            	font-size: 1.5em;
-            	line-height: 2.5em;
+                font-size: 1.5em;
+                line-height: 2.5em;
             }
             ul {
                 display: none;
             }
             &:last-of-type{
-            	padding-right: 0;
+                padding-right: 0;
             }
         }
     }
 }
 
-@include breakpoint($tablet) {}
+
+ */

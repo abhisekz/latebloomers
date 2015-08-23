@@ -1,6 +1,9 @@
 .into-section {
     .container {
-        padding: 4.5em 4em 3.5em;
+        padding: 20px 0;
+        @media (min-width: $screen-md-min) {
+            padding: 4.5em 4em 3.5em;
+        }
         text-align: center;
     }
     h2 {
@@ -13,18 +16,22 @@
 }
 
 .home-container {
-    @include container($desktop);
+    @extend .container;
     padding-bottom: 3em;
     section {
-        @include span(4);
+        @include make-md-column(4);
         padding: 15px;
-        @include box-sizing();
         .box {
             background: #fff;
             box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
-            padding: 3em 2.25em;
+            padding: 30px;
             text-align: center;
-            min-height: 330px;
+            @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+                min-height: 430px;
+            }
+            @media (min-width: $screen-lg-min) {
+                min-height: 400px;
+            }
             i {
                 background-color: $primary-color;
                 border-radius: 100%;
@@ -36,130 +43,172 @@
                 margin: 0 auto 1.5em auto;
                 text-align: center;
                 width: 66px;
-                background-image: linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
+                background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 0%);
                 font-size: 30px;
-                
             }
             h2 {
-            	font-size: 1.5em;
-    			margin-bottom: 1.5em;
+                font-size: 1.5em;
+                margin-bottom: 1.5em;
             }
             p {
-            	margin-bottom: 0;
+                margin-bottom: 0;
+            }
+            ul {
+                @include reset-list;
             }
         }
         .offer {
-        	i {
-        		@include icon(heart);
-        	}
+            i {
+                @include icon(heart);
+            }
         }
         .why-there i {
-        	@include icon(thumbs-up);
+            @include icon(thumbs-up);
         }
         .we-do i {
-        	@include icon(user);
+            @include icon(user);
         }
     }
 }
-.home-aside {
-	background: $primary-color;
-	padding: 4em 0;
-	.section-hdr {
-		color: #fff;
-		text-align: center
-	}
-	p {
-	    color: #fbe8ea;
-	    font-size: 1.3em;
-	    text-align: center;
-	    padding: 1em 3em;
-	}
-	.newsletter {
-		@include span(12);
-		position: relative;
-		input[type='email']{
-			background-color: transparent;
-			
-		    border: 0 solid rgba(0,0,0,.2);
-		    border-bottom-width: 3px;
-		    display: block;
-		    width: 0%;
-		    margin: 0em auto 1em;
-		    font-size: 3em;
-		    text-align: center;
-		    padding: 0px 0 10px;
-		    outline: none;
-		    color: $white;
-		    transition: all 1s ease;
-		}
-		button {
-			    background: #5b5c6b;
-			    padding: 8px;
-			    height: auto;
-			    width: 160px;
-			    font-size: 1em;
-			    margin: 0 auto;
-			    display: block;
-			    position: absolute;
-			    top: 14px;
-			    right: 41%;
-			    transition: all 1s ease;
-			    background-image: linear-gradient(45deg, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 0%);
-			    outline: none;
-		}
-	}
-	.newsletter.open {
-		input[type='email']{
-			width: 90%;
-		}
-		button {
-			right: 60px;
-		}
-	}
-	section {
-        @include span(4);
-        padding: 15px;
-        @include box-sizing();
-        .box {
-            background: #EC828C;
-            box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
-            padding: 3em 2.25em;
-            text-align: center;
-            min-height: 130px;
-            color: $white;
-            overflow: hidden;
-            position: relative;
-            i.user {
-            	@include icon(user);
-               	transform: rotate(-25deg);
-               	position: absolute;
-               	opacity: .3;
-               	font-size: 200px;
-            }
-            i.ask {
-            	@include icon(envelope);
-               	transform: rotate(-25deg);
-               	position: absolute;
-               	opacity: .3;
-               	font-size: 200px;
-            }
-            i.faq {
-            	@include icon(question-circle);
-               	transform: rotate(-25deg);
-               	position: absolute;
-               	opacity: .3;
-               	font-size: 200px;
-            }
 
-            h2 {
-            	font-size: 2.5em;
-			    margin-bottom: 1.5em;
-			    color: #ffffff;
-			    text-align: left;
-            }
-            p {
-            	margin-bottom: 0;
+.home-aside {
+    background: $primary-color;
+    padding: 4em 0;
+    .section-hdr {
+        color: #fff;
+        text-align: center
+    }
+    p {
+        color: #fbe8ea;
+        font-size: 1.3em;
+        text-align: center;
+        @media (min-width: $screen-sm-min) {
+                padding: 1em 3em;
+        }
+        
+    }
+    .newsletter {
+        position: relative;
+        input[type='email'] {
+            background-color: transparent;
+            border: 0 solid rgba(0, 0, 0, .2);
+            border-bottom-width: 0px;
+            display: block;
+            width: 100%;
+            margin: 0em auto 1em;
+            font-size: 1.5em;
+            height: 0px;
+            text-align: center;
+            padding: 0px 0 5px;
+            outline: none;
+            color: #fff;
+            transition: all 1s ease;
+            @media (min-width: $screen-sm-min){
+                border-bottom-width: 3px;
+                width: 0%;
+                height: auto;
+                margin: 0em auto 1em;
+                font-size: 3em;
+                transition: all 1s ease;
             }
         }
+        button {
+            background: #5b5c6b;
+            padding: 8px;
+            height: auto;
+            width: 160px;
+            font-size: 1em;
+            margin: 0 auto;
+            display: block;
+            transition: all 1s ease;
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 0%);
+            outline: none;
+            @media (min-width: $screen-sm-min){
+                height: auto;
+                width: 160px;
+                font-size: 1em;
+                margin: 0 auto;
+                display: block;
+                position: absolute;
+                top: 14px;
+                right: 41%;
+                transition: all 1s ease;
+                background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 0%);
+                outline: none;
+            }
+        }
+
+    }
+    .newsletter.open {
+        @media (min-width: $screen-sm-min){
+            input[type='email'] {
+                width: 90%;
+            }
+            button {
+                right: 50px;
+            }
+        }
+        @media (max-width: $screen-xs-max){
+            input[type='email'] {
+                height: 70px;
+                border-bottom-width: 3px; 
+            }
+        }
+    }
+    .extra-section {
+        section {
+            @include make-sm-column(4);
+            padding: 15px;
+            .box {
+                background: #EC828C;
+                box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+                padding: 20px 30px;
+                text-align: center;
+                min-height: 185px;
+                color: $white;
+                overflow: hidden;
+                position: relative;
+                i.user {
+                    @include icon(user);
+                    transform: rotate(-25deg);
+                    position: absolute;
+                    opacity: .3;
+                    font-size: 200px;
+                }
+                i.ask {
+                    @include icon(envelope);
+                    transform: rotate(-25deg);
+                    position: absolute;
+                    opacity: .3;
+                    font-size: 200px;
+                }
+                i.faq {
+                    @include icon(question-circle);
+                    transform: rotate(-25deg);
+                    position: absolute;
+                    opacity: .3;
+                    font-size: 200px;
+                }
+                h2 {
+                    font-size: 2em;
+                    margin-bottom: 1.5em;
+                    color: #ffffff;
+                    text-align: left;
+                }
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        
+    }
 }
+.newsletter-section {
+    .section-hdr {
+            &:before,
+            &:after {
+                background-size: 40px 20px;
+                width: 40px;
+            }
+        }
 }

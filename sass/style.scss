@@ -2,9 +2,15 @@
 
 @import 'compass';
 
-@import 'compass/reset';
-
 @import 'lib/font-awesome';
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
+
+@import 'variables/variables';
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import 'base/typography';
+
 
 // Variables 
 
@@ -24,13 +30,13 @@
 
 @import 'base/elements';
 @import 'base/forms';
-@import 'base/typography';
+@import 'base/typography'; 
 
 // Owl Carousel 
 
 @import 'lib/owl-carousel/owl.carousel';
 
-
+ 
 // Components
 
 @import 'components/header';

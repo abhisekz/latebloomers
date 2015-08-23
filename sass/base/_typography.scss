@@ -1,45 +1,14 @@
 #{headings()} {
-    font-weight: $heading-font-weight;
-    color: $heading-color;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    @include trailer(.5);
+    letter-spacing: -0.05em;
 }
 
-h1 {
-    @include adjust-font-size-to($base-font-size + ($golden-ratio * 10), 1);
-}
-
-h2 {
-    @include adjust-font-size-to($base-font-size + ($golden-ratio * 8), 1);
-}
-
-h3 {
-    @include adjust-font-size-to($base-font-size + ($golden-ratio * 6), 1);
-}
-
-h4 {
-    @include adjust-font-size-to($base-font-size + ($golden-ratio * 4), 1);
-}
-
-h5 {
-    @include adjust-font-size-to($base-font-size + ($golden-ratio * 2), 1);
-}
-
-h6 {
-    @include adjust-font-size-to($base-font-size, 1);
-}
-
-p {
-    //@include leader(1);
-    @include trailer(1);
-}
-
-a {
-    color: $primary-color;
-}
 
 .section-hdr {
+    text-align: center;
+    @media (max-width: $screen-xs-max){
+        font-size: 1.5em;
+    }
     &:before,
     &:after {
         background-image: url("../images/section-header.svg");
@@ -49,14 +18,23 @@ a {
         height: 20px;
         width: 150px;
         background-position: center right;
-        margin-right: 1em;
+        margin-right: 10px;
+        @media (min-width: $screen-sm-min){
+            margin-right: 1em;
+        }
         background-size: 75px 20px;
         width: 75px;
     }
     &:after {
         transform: scaleX(-1);
         background-position: center left;
-        margin-left: 1em;
+        margin-left: 10px;
+        @media (min-width: $screen-sm-min){
+            margin-left: 1em;
+        }
         margin-right: 0;
     }
+}
+.page-title {
+    margin: 2em;
 }

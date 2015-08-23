@@ -6,16 +6,25 @@
 		repeat : repeat-x;
 		position: 25% bottom;
 	}
-	padding: 8em 0;
+	padding: 2em 0;
+	@media (min-width: $screen-sm-min){
+		padding: 8em 0;
+	}
 	text-align: center;
 	h2 {
-		font-size: 2.8em;
-		color: $white;
+		font-size: 1.5em;
+		@media (min-width: $screen-sm-min){
+			font-size: 2em;
+		}
+		color: #fff;
 	}
 	p {
-		color: $primary-color;
-		font-size: 2em;
+		color: $brand-primary;
+		font-size: 1.2em;
 		margin: 1em;
+		@media (min-width: $screen-sm-min){
+			font-size: 1.8em;
+		}
 	}
 	.button {
 		margin-top: 30px;
