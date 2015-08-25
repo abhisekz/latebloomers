@@ -10,11 +10,24 @@
         a {
             font-size: 1em;
             line-height: 2.5em;
-
+            position: relative;
+            transition: all .5s ease-out;
+            border-bottom: 0px solid $brand-primary;
             @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
                     padding: 15px 8px;
                     font-size: 1em;
                 }
+            &:hover {
+                background: none;
+                color: $brand-primary;
+                border-bottom: 5px solid $brand-primary;
+            }
+
+        }
+        &.active {
+            a {
+                color: $brand-primary;
+            }
         }
         > ul {
             display: none;

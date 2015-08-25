@@ -16,13 +16,13 @@
         text-transform: uppercase;
 
         span {
-            font-size: .6em;
+            font-size: .7em;
             display: block;
             margin: 0;
             @media (min-width: $screen-md-min) {
                 margin: 0px 0 0;
             }
-            opacity: .5;
+            color: #5383d3;
             font-weight: 300;
         }
     }

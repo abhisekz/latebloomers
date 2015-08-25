@@ -35,6 +35,15 @@
         margin-right: 0;
     }
 }
-.page-title {
+.page-title { 
     margin: 2em;
+    @media (max-width: $screen-xs-max){
+        margin: 1em 0;
+        &:before,
+            &:after {
+                background-size: 40px 20px;
+                width: 40px;
+            }
+    }
+   
 }
