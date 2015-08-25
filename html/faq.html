@@ -173,6 +173,11 @@
         </div>
     </aside>
     <!-- Aside content ends here -->
+    <div id="counter">
+        <div class="container">
+            Visitors:&nbsp;<span class="count">200</span>
+        </div>
+    </div>
     <!-- Footer section starts -->
     <footer class="footer-distributed">
         <div class="container">
@@ -243,45 +248,7 @@
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
-    <script>
-    $(function() {
-        $('.open-form').on('click', function() {
-            $('.newsletter').addClass('open');
-            $('.newsletter').find('input').focus();
-            return false;
-        });
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            dots: true,
-            autoplay: true,
-            nav: false,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: true
-                },
-                600: {
-                    items: 1,
-                    nav: false
-                },
-                1000: {
-                    items: 1,
-                    nav: true,
-                    loop: false
-                }
-            }
-        });
-    })
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 420) {
-            $('.header-wrap').addClass("sticky");
-        } else {
-            $('.header-wrap').removeClass("sticky");
-        }
-    });
-    </script>
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>

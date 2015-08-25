@@ -2978,7 +2978,7 @@ hr {
   cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, #counter, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 900;
@@ -2986,8 +2986,9 @@ h1, h2, h3, h4, h5, h6,
   color: #555555;
 }
 h1 small,
-h1 .small, h2 small,
-h2 .small, h3 small,
+h1 .small, h2 small, #counter small,
+h2 .small,
+#counter .small, h3 small,
 h3 .small, h4 small,
 h4 .small, h5 small,
 h5 .small, h6 small,
@@ -3005,7 +3006,8 @@ h6 .small,
 }
 
 h1, .h1,
-h2, .h2,
+h2,
+#counter, .h2,
 h3, .h3 {
   margin-top: 22px;
   margin-bottom: 11px;
@@ -3014,7 +3016,9 @@ h1 small,
 h1 .small, .h1 small,
 .h1 .small,
 h2 small,
-h2 .small, .h2 small,
+#counter small,
+h2 .small,
+#counter .small, .h2 small,
 .h2 .small,
 h3 small,
 h3 .small, .h3 small,
@@ -3044,7 +3048,7 @@ h1, .h1 {
   font-size: 41px;
 }
 
-h2, .h2 {
+h2, #counter, .h2 {
   font-size: 34px;
 }
 
@@ -8809,7 +8813,7 @@ button.close {
     display: none !important;
   }
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, #counter, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: -0.05em;
 }
@@ -8899,7 +8903,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
   white-space: nowrap;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, #counter, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: -0.05em;
 }
@@ -9244,12 +9248,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   font: normal 14px sans-serif;
   padding: 30px 0px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 @media (min-width: 768px) {
   .footer-distributed {
     padding: 55px 50px;
-    margin-top: 80px;
+    margin-top: 0px;
   }
 }
 @media (max-width: 767px) {
@@ -9495,6 +9499,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
+#counter {
+  margin: 5px;
+  text-align: right;
+  line-height: 100px;
+  color: #808080;
+  font-size: 2em;
+}
+
+.count {
+  color: #000;
+}
+
 @media (min-width: 768px) {
   .nav {
     float: right;
@@ -9573,12 +9589,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 8em 0;
   }
 }
-#banner h2 {
+#banner h2, #banner #counter {
   font-size: 1.5em;
   color: #fff;
 }
 @media (min-width: 768px) {
-  #banner h2 {
+  #banner h2, #banner #counter {
     font-size: 2em;
   }
 }
@@ -9608,7 +9624,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 4.5em 4em 3.5em;
   }
 }
-.into-section h2 {
+.into-section h2, .into-section #counter {
   margin-bottom: 1em;
 }
 .into-section p {
@@ -9662,7 +9678,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 0%);
   font-size: 30px;
 }
-.home-container section .box h2 {
+.home-container section .box h2, .home-container section .box #counter {
   font-size: 1.5em;
   margin-bottom: 1.5em;
 }
@@ -9803,7 +9819,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: .3;
   font-size: 200px;
 }
-.home-aside .extra-section section .box h2 {
+.home-aside .extra-section section .box h2, .home-aside .extra-section section .box #counter {
   font-size: 2em;
   margin-bottom: 1.5em;
   color: #ffffff;
