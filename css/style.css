@@ -8868,6 +8868,182 @@ h1, h2, #counter, h3, h4, h5, h6 {
   }
 }
 
+.under-construction {
+  text-align: center;
+  font-size: 2em;
+  margin: 4em 0;
+}
+@media (min-width: 768px) {
+  .under-construction {
+    margin: 4em;
+  }
+}
+
+.office-location > div {
+  margin: 2em 0;
+}
+.office-location .fa, .office-location .home-container section .offer i, .home-container section .offer .office-location i, .office-location .home-container section .why-there i, .home-container section .why-there .office-location i, .office-location .home-container section .we-do i, .home-container section .we-do .office-location i, .office-location .home-aside .extra-section section .box i.user, .home-aside .extra-section section .box .office-location i.user, .office-location .home-aside .extra-section section .box i.ask, .home-aside .extra-section section .box .office-location i.ask, .office-location .home-aside .extra-section section .box i.faq, .home-aside .extra-section section .box .office-location i.faq {
+  float: left;
+  font-size: 1.5em;
+  margin-right: 15px;
+}
+
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1em 0;
+  width: 100%;
+  vertical-align: top;
+}
+@media (min-width: 992px) {
+  .input {
+    max-width: 80%;
+    width: calc(100% - 2em);
+  }
+}
+
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+  outline: none;
+}
+
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+}
+
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+
+.icon {
+  color: #ddd;
+  font-size: 150%;
+}
+
+/* Yoko */
+.input__field--yoko {
+  z-index: 10;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.input__label--yoko {
+  position: relative;
+  width: 100%;
+  color: #b04b40;
+  text-align: left;
+}
+
+.input__label--yoko::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background: #E96C77;
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.textarea-yoko-message {
+  height: 220px;
+}
+
+.textarea-yoko::before {
+  height: 220px;
+}
+
+.input__label--yoko::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3em;
+  background: #E96C77;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.input__label-content--yoko {
+  padding: 0.75em 0;
+}
+
+.input__field--yoko:focus,
+.input--filled .input__field--yoko {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.input__field--yoko:focus + .input__label--yoko::before,
+.input--filled .input__label--yoko::before {
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+}
+
+.input__field--yoko:focus + .input__label--yoko,
+.input--filled .input__label--yoko {
+  pointer-events: none;
+}
+
+.input__field--yoko:focus + .input__label--yoko::after,
+.input--filled .input__label--yoko::after {
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+}
+
 .content-area {
   background: #fff;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
@@ -8956,6 +9132,26 @@ h1, h2, #counter, h3, h4, h5, h6 {
     background-size: 40px 20px;
     width: 40px;
   }
+}
+
+.under-construction {
+  text-align: center;
+  font-size: 2em;
+  margin: 4em 0;
+}
+@media (min-width: 768px) {
+  .under-construction {
+    margin: 4em;
+  }
+}
+
+.office-location > div {
+  margin: 2em 0;
+}
+.office-location .fa, .office-location .home-container section .offer i, .home-container section .offer .office-location i, .office-location .home-container section .why-there i, .home-container section .why-there .office-location i, .office-location .home-container section .we-do i, .home-container section .we-do .office-location i, .office-location .home-aside .extra-section section .box i.user, .home-aside .extra-section section .box .office-location i.user, .office-location .home-aside .extra-section section .box i.ask, .home-aside .extra-section section .box .office-location i.ask, .office-location .home-aside .extra-section section .box i.faq, .home-aside .extra-section section .box .office-location i.faq {
+  float: left;
+  font-size: 1.5em;
+  margin-right: 15px;
 }
 
 /* 
@@ -9193,10 +9389,10 @@ h1, h2, #counter, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 .header-wrap a span {
-  font-size: .7em;
+  font-size: .6em;
   display: block;
   margin: 0;
-  color: #5383d3;
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 300;
 }
 @media (min-width: 992px) {
@@ -9330,7 +9526,7 @@ h1, h2, #counter, h3, h4, h5, h6 {
 }
 
 .footer-distributed h3 span {
-  color: #5383d3;
+  color: rgba(255, 255, 255, 0.5);
   display: block;
   font-size: 0.6em;
   font-weight: 300;
@@ -9800,6 +9996,7 @@ h1, h2, #counter, h3, h4, h5, h6 {
   color: #ffffff;
   overflow: hidden;
   position: relative;
+  display: block;
 }
 .home-aside .extra-section section .box i.user {
   transform: rotate(-25deg);

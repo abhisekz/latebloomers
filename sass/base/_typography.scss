@@ -47,3 +47,21 @@
     }
    
 }
+.under-construction {
+    text-align: center;
+    font-size: 2em;
+    margin: 4em 0;
+    @media (min-width: $screen-sm-min){
+        margin: 4em;
+    }
+}
+.office-location {
+    > div {
+        margin: 2em 0;
+    }
+    .fa {
+        float: left;
+        font-size: 1.5em;
+        margin-right: 15px;
+    }
+}
