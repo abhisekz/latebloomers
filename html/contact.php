@@ -25,23 +25,30 @@
                                 <div class="alert alert-success hide"><strong><span class="glyphicon glyphicon-send"></span> Success! Message sent. (If form ok!)</strong></div>
                                 <div class="alert alert-danger hide"><span class="glyphicon glyphicon-alert"></span><strong> Error! Please check the inputs. (If form error!)</strong></div>
                             </div>
-                            <form role="form" action="" method="post">
-                                <div class="col-md-7 content">
+                            
+                        <div class="col-md-7 content">       
+                           
+                        <?php
+                            if (!array_key_exists('Submitted',$_POST)) {
+                        ?>
+                            <form role="form" action="contact.php" method="post">
+                                
                                     <h3>Send your queries</h3>
+                                    <input type="hidden" name="Submitted" value="true">
                                     <span class="input input--minoru">
-                                        <input class="input__field input__field--yoko" type="text" id="name" />
+                                        <input class="input__field input__field--yoko" type="text" id="name" name="name"/>
                                         <label class="input__label input__label--yoko" for="name">
                                             <span class="input__label-content input__label-content--yoko">Your Name *</span>
                                         </label>
                                     </span>
                                     <span class="input input--minoru">
-                                        <input class="input__field input__field--yoko" type="email" id="email" />
+                                        <input class="input__field input__field--yoko" type="email" id="email" name="email" />
                                         <label class="input__label input__label--yoko" for="email">
                                             <span class="input__label-content input__label-content--yoko">Your email *</span>
                                         </label>
                                     </span>
                                     <span class="input input--minoru">
-                                        <textarea class="input__field input__field--yoko textarea-yoko-message"></textarea>
+                                        <textarea class="input__field input__field--yoko textarea-yoko-message" name="message"></textarea>
                                         <label class="input__label input__label--yoko textarea-yoko" for="input-18">
                                             <span class="input__label-content input__label-content--yoko">Your message *</span>
                                         </label>
@@ -56,8 +63,61 @@
                                     <div class="input">
                                         <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info btn-block">
                                     </div>
-                                </div>
+                                
                             </form>
+                             <?php
+                            } else {
+                                require("PHPMailer/class.phpmailer.php");
+                                $to = "contact@latebloomersrehab.org";
+                                $from = $_POST['name'];
+                                $fromName = $_POST['email'];
+                                $subject = "Query from website";
+                                $message = $_POST['message'];
+                                 
+                                if (array_key_exists('HTML',$_POST))
+                                {
+                                    $html = true;
+                                }
+                                else
+                                {
+                                    $html = false;
+                                }
+                                 
+                                 
+                                $mail = new PHPMailer();
+
+                                $mail->IsSMTP();                                      // set mailer to use SMTP
+                                $mail->Host = "smtp.net4india.com";  // specify main and backup server
+                                $mail->SMTPAuth = true;     // turn on SMTP authentication
+                                $mail->Username = "contact@latebloomersrehab.org";  // SMTP username
+                                $mail->Password = "lord_1959"; // SMTP password
+                                 
+                                /*$mail->From = $from;
+                                $mail->FromName = $fromName;
+                                $mail->AddAddress($to);*/
+                                
+                                $mail->From = "contact@latebloomersrehab.org";
+                                $mail->FromName = "Late Bloomers Rehabilitation Centre";
+                                //$mail->AddAddress("abhisek0.boss@gmail.com", "Abhisek Roy");
+                                $mail->AddAddress("contact@latebloomersrehab.org", "Late Bloomers Rehabilitation"); 
+                                $mail->WordWrap = 200; // set word wrap
+                                $mail->IsHTML($html);
+                                 
+                                $mail->Subject  = $subject;
+                                $mail->Body = "The user Mr/Mrs. ". $fromName . " email: " . $from . " has requested your resume and the message from the user is as follows: \n\n" . $message;
+                                 
+                                if($mail->Send())
+                                {
+                                    echo '<div class="successMsg">Message has been sent successfully.</div>';
+                                }
+                                else
+                                {
+                                     echo "Message Not Sent<br>";
+                                     echo "Mailer Error: " . $mail->ErrorInfo;
+                                }
+                            }
+                        ?>
+                        </div>
                             <hr class="featurette-divider hidden-lg">
                             <div class="col-md-5">
                                 <address>

@@ -25,13 +25,13 @@
 
      var openNewsletterForm = function() {
          $('.open-form').on('click', function() {
-            if(!checked){
+             if (!checked) {
                  $('.newsletter').addClass('open');
                  $('.newsletter').find('input').focus();
                  checked = true;
                  return false;
-            }
-            
+             }
+
          });
      };
 
@@ -73,7 +73,7 @@
          if ($('#counter').isOnScreen() && !checked) {
              $('.count').each(function() {
                  $(this).prop('Counter', 0).animate({
-                     Counter: parseInt($(this).text(),10)
+                     Counter: parseInt($(this).text(), 10)
                  }, {
                      duration: 1000,
                      easing: 'swing',
@@ -86,8 +86,10 @@
          }
      };
 
-     var setupCounter = function(){
-        $(".counter").html(parseInt($("#stat").text(),10));
+    
+
+     var setupCounter = function() {
+         $(".counter").html(parseInt($("#stat").text(), 10));
      }
 
      return {
@@ -95,7 +97,8 @@
          fixedHeaderAnimation: fixedHeaderAnimation,
          initialiseOwlCarousel: initialiseOwlCarousel,
          openNewsletterForm: openNewsletterForm,
-         setupCounter : setupCounter
+         setupCounter: setupCounter,
+         //submitContactForm: submitContactForm
      };
 
  })();
@@ -106,46 +109,52 @@
 
      LateBloomers.initialiseOwlCarousel();
      LateBloomers.openNewsletterForm();
-     //LateBloomers.setupCounter();
-    $(window).scroll(function() {
-
-         //LateBloomers.animateVisitCounter();
+     
+     $(window).scroll(function() {
          LateBloomers.fixedHeaderAnimation();
-
-     }); 
+     });
  });
 
-(function() {
-    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-    if (!String.prototype.trim) {
-        (function() {
-            // Make sure we trim BOM and NBSP
-            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-            String.prototype.trim = function() {
-                return this.replace(rtrim, '');
-            };
-        })();
-    }
 
-    [].slice.call( document.querySelectorAll( '.input__field' ) ).forEach( function( inputEl ) {
-        // in case the input is already filled..
-        if( inputEl.value.trim() !== '' ) {
-            classie.add( inputEl.parentNode, 'input--filled' );
-        }
 
-        // events:
-        inputEl.addEventListener( 'focus', onInputFocus );
-        inputEl.addEventListener( 'blur', onInputBlur );
-    } );
 
-    function onInputFocus( ev ) {
-        classie.add( ev.target.parentNode, 'input--filled' );
-    }
 
-    function onInputBlur( ev ) {
-        if( ev.target.value.trim() === '' ) {
-            classie.remove( ev.target.parentNode, 'input--filled' );
-        }
-    }
-})();
- 
+
+
+
+
+ (function() {
+     // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+     if (!String.prototype.trim) {
+         (function() {
+             // Make sure we trim BOM and NBSP
+             var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+             String.prototype.trim = function() {
+                 return this.replace(rtrim, '');
+             };
+         })();
+     }
+
+     [].slice.call(document.querySelectorAll('.input__field')).forEach(function(inputEl) {
+         // in case the input is already filled..
+         if (inputEl.value.trim() !== '') {
+             //classie.add(inputEl.parentNode, 'input--filled');
+         }
+
+         // events:
+         inputEl.addEventListener('focus', onInputFocus);
+         inputEl.addEventListener('blur', onInputBlur);
+     });
+
+     function onInputFocus(ev) {
+         //classie.add(ev.target.parentNode, 'input--filled');
+     }
+
+     function onInputBlur(ev) {
+         if (ev.target.value.trim() === '') {
+             //classie.remove(ev.target.parentNode, 'input--filled');
+         }
+     }
+ })();
+
+

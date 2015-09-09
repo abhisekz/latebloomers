@@ -1,4 +1,4 @@
-<?php $baseUrl = '/latebloomers' ?>
+<?php $baseUrl = 'http://latebloomersrehab.org' ?>
 
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo $baseUrl; ?>/icons/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo $baseUrl; ?>/icons/apple-icon-60x60.png">
