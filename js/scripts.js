@@ -62,11 +62,20 @@
      };
 
      var fixedHeaderAnimation = function() {
-         if ($('body').scrollTop() > 420) {
-             $('.header-wrap').addClass("sticky");
+        if($('body').hasClass('home')){
+            if ($('body').scrollTop() > 420) {
+                 $('.header-wrap').addClass("sticky");
+             } else {
+                 $('.header-wrap').removeClass("sticky");
+             }
          } else {
-             $('.header-wrap').removeClass("sticky");
+            if ($('body').scrollTop() > 100) {
+                 $('.header-wrap').addClass("sticky");
+             } else {
+                 $('.header-wrap').removeClass("sticky");
+             }
          }
+         
      };
 
      var animateVisitCounter = function() {
@@ -147,12 +156,12 @@
      });
 
      function onInputFocus(ev) {
-         //classie.add(ev.target.parentNode, 'input--filled');
+         classie.add(ev.target.parentNode, 'input--filled');
      }
 
      function onInputBlur(ev) {
          if (ev.target.value.trim() === '') {
-             //classie.remove(ev.target.parentNode, 'input--filled');
+             classie.remove(ev.target.parentNode, 'input--filled');
          }
      }
  })();

@@ -13,10 +13,10 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li <?php if ($currentPage=="Home") echo "class=\"active\""; ?>><a href="<?php echo $baseUrl; ?>/index">Home</a></li>
-                    <li <?php if ($currentPage=="Aboutus") echo "class=\"active\""; ?>><a href="<?php echo $baseUrl; ?>/html/aboutus">About Us</a></li>
-                    <li <?php if ($currentPage=="Treatment") echo "class=\"active\""; ?>><a href="<?php echo $baseUrl; ?>/html/treatment">Treatment</a></li>
-                    <li <?php if ($currentPage=="ChildCare") echo "class=\"active\""; ?>><a href="<?php echo $baseUrl; ?>/html/childcare">Child care</a></li>
-                    <li <?php if ($currentPage=="Contact") echo "class=\"active\""; ?>><a href="<?php echo $baseUrl; ?>/html/contact">Contact Us</a></li>
+                    <li <?php if ($currentPage=="Aboutus") echo "class=\"active\""; ?>><a href="<?php echo $baseUrl; ?>/aboutus">About Us</a></li>
+                    <li <?php if ($currentPage=="Treatment") echo "class=\"active\""; ?>><a href="<?php echo $baseUrl; ?>/treatment">Treatment</a></li>
+                    <li <?php if ($currentPage=="ChildCare") echo "class=\"active\""; ?>><a href="<?php echo $baseUrl; ?>/childcare">Child care</a></li>
+                    <li <?php if ($currentPage=="Contact") echo "class=\"active\""; ?>><a href="<?php echo $baseUrl; ?>/contact">Contact Us</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->

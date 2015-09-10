@@ -6,6 +6,7 @@
     <title>Late Bloomers | Contact us</title>
     <meta description="This is the description">
     <?php include 'includes/head.php'; ?>
+    
     <?php $currentPage = "Contact"; ?>
 </head>
 
@@ -31,7 +32,7 @@
                         <?php
                             if (!array_key_exists('Submitted',$_POST)) {
                         ?>
-                            <form role="form" action="contact.php" method="post">
+                            <form role="form" action="contact.php" method="post" id="contact-form">
                                 
                                     <h3>Send your queries</h3>
                                     <input type="hidden" name="Submitted" value="true">
@@ -54,7 +55,7 @@
                                         </label>
                                     </span>
                                     <span class="input input--minoru">
-                                        <input class="input__field input__field--yoko" type="email" id="InputReal" />
+                                        <input class="input__field input__field--yoko" type="text" id="InputReal" />
                                         <label class="input__label input__label--yoko" for="InputReal">
                                             <span class="input__label-content input__label-content--yoko">What is 4+3? (Simple Spam Checker) *</span>
                                         </label>
@@ -69,8 +70,8 @@
                             } else {
                                 require("PHPMailer/class.phpmailer.php");
                                 $to = "contact@latebloomersrehab.org";
-                                $from = $_POST['name'];
-                                $fromName = $_POST['email'];
+                                $from = $_POST['email'];
+                                $fromName = $_POST['name'];
                                 $subject = "Query from website";
                                 $message = $_POST['message'];
                                  
@@ -97,21 +98,41 @@
                                 $mail->AddAddress($to);*/
                                 
                                 $mail->From = "contact@latebloomersrehab.org";
-                                $mail->FromName = "Late Bloomers Rehabilitation Centre";
-                                //$mail->AddAddress("abhisek0.boss@gmail.com", "Abhisek Roy");
+                                $mail->FromName = $fromName;
+                                
                                 $mail->AddAddress("contact@latebloomersrehab.org", "Late Bloomers Rehabilitation"); 
+                                $mail->AddAddress("latebloomersrc@gmail.com", "Late Bloomers Rehabilitation"); 
                                 $mail->WordWrap = 200; // set word wrap
                                 $mail->IsHTML($html);
                                  
                                 $mail->Subject  = $subject;
-                                $mail->Body = "The user Mr/Mrs. ". $fromName . " email: " . $from . " has requested your resume and the message from the user is as follows: \n\n" . $message;
+                                $mail->Body = "Mr/Mrs. ". $fromName . "\n email: " . $from . " has send you a query, which is as follows: \n\n" . $message;
                                  
                                 if($mail->Send())
                                 {
-                                    echo '<div class="successMsg">Message has been sent successfully.</div>';
+                                    echo '<div class="successMsg"><div class="da-icon da-success animateErrorIcon">
+                                          <span class="da-line da-tip"></span>
+                                          <span class="da-line da-long"></span>
+
+                                          <div class="da-placeholder"></div>
+                                          <div class="da-fix"></div>
+                                        </div>Message has been sent successfully.</div>';
+                                    ?>
+                                        <script>swal("Done !", "Your message sent successfully!", "success")</script>
+                                    <?php
                                 }
                                 else
                                 {
+                                    echo '<div class="errorMsg"><div class="da-icon da-error">
+                                           <span class="da-x-mark animateXMark">
+                                            <span class="da-line da-left"></span>
+                                            <span class="da-line da-right"></span>
+                                          </span>
+                                          <div class="da-fix"></div>
+                                        </div>Message could not be sent.</div>';
+                                    ?>
+                                        <script>swal("Sorry !", "Message Not Sent!", "error")</script>
+                                    <?php
                                      echo "Message Not Sent<br>";
                                      echo "Mailer Error: " . $mail->ErrorInfo;
                                 }
@@ -147,6 +168,23 @@
     
     <!-- Footer section starts -->
     <?php include 'includes/footer.php'; ?>
+    <script type="text/javascript">
+        $(function() {
+            window.onload = function(){
+                if(location.hash){
+                    var target = $('#contact-form');
+              
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top - 200
+                }, 1000);
+                return false;
+              }
+                }
+              
+            }
+          });
+    </script>
     
 </body>
 

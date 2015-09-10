@@ -15,7 +15,7 @@
                         <div id="mc_embed_signup_scroll">
                             <div class="mc-field-group">
                                 <label for="mce-EMAIL" class="sr-only">Email Address </label>
-                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                                <input type="email" value="" name="EMAIL" class="required email" placeholder="your email" id="mce-EMAIL">
                             </div>
                             <div id="mce-responses" class="clear">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
@@ -35,19 +35,19 @@
             </div>
             <div class="extra-section">
                 <section>
-                    <a href="#" class="box">
+                    <a class="box" onclick='sweetAlert("Oops...", "This page is not yet ready!", "error")'>
                         <i class="user"></i>
                         <h2>Are you addicted ? </h2>
                     </a>
                 </section>
                 <section>
-                    <a href="#" class="box">
+                    <a href="<?php echo $baseUrl; ?>/contact#ask-us" class="box">
                         <i class="ask"></i>
                         <h2>Ask Us </h2>
                     </a>
                 </section>
                 <section>
-                    <a href="faq" class="box">
+                    <a href="<?php echo $baseUrl; ?>/faq" class="box">
                         <i class="faq"></i>
                         <h2>FAQ</h2>
                     </a>

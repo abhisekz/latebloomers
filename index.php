@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title>Late Bloomers | Home</title>
     <meta description="This is the description">
-    <?php include 'html/includes/head.php'; ?>
+    <?php include 'includes/head.php'; ?>
     <?php $currentPage = "Home"; ?>
 </head>
 
-<body>
-    <?php include 'html/includes/header.php'; ?>
+<body class="home">
+    <?php include 'includes/header.php'; ?>
     <section id="banner">
         <div class="container">
             <div class="owl-carousel">
@@ -94,11 +94,11 @@
         </article>
     </main>
     <!-- Main content section ends -->
-    <?php include 'html/includes/newsletter.php'; ?>
+    <?php include 'includes/newsletter.php'; ?>
     <!-- Aside content ends here -->
     
     <!-- Footer section starts -->
-    <?php include 'html/includes/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
 </body>
 
 </html>

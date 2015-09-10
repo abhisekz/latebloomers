@@ -1,4 +1,4 @@
-<?php $baseUrl = 'http://latebloomersrehab.org' ?>
+<?php $baseUrl = 'http://www.latebloomersrehab.org' ?>
 
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo $baseUrl; ?>/icons/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo $baseUrl; ?>/icons/apple-icon-60x60.png">
@@ -18,6 +18,8 @@
 <meta name="msapplication-TileImage" content="<?php echo $baseUrl; ?>/icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/style.css">
+<link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/lib/sweetalert.css">
+    <script src="<?php echo $baseUrl; ?>/js/sweetalert-dev.js"></script>
 <!--[if lt IE 9]>
     <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
 <![endif]-->
