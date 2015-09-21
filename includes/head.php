@@ -1,5 +1,5 @@
-<?php $baseUrl = 'http://www.latebloomersrehab.org' ?>
-
+<?php $baseUrl = '/latebloomers' ?>
+<!-- 'http://www.latebloomersrehab.org' -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 

@@ -59,23 +59,45 @@
                  }
              }
          });
+         $('#myModal').on('shown.bs.modal', function(e) {
+             $("#questionaire").owlCarousel({
+                 responsive: {
+                     0: {
+                         items: 1,
+                         nav: true
+                     },
+                     600: {
+                         items: 1,
+                         nav: false
+                     },
+                     1000: {
+                         items: 1,
+                         nav: true,
+                         loop: false
+                     }
+                 }
+             });
+
+         })
+         
+
      };
 
      var fixedHeaderAnimation = function() {
-        if($('body').hasClass('home')){
-            if ($('body').scrollTop() > 420) {
+         if ($('body').hasClass('home')) {
+             if ($('body').scrollTop() > 420) {
                  $('.header-wrap').addClass("sticky");
              } else {
                  $('.header-wrap').removeClass("sticky");
              }
          } else {
-            if ($('body').scrollTop() > 100) {
+             if ($('body').scrollTop() > 100) {
                  $('.header-wrap').addClass("sticky");
              } else {
                  $('.header-wrap').removeClass("sticky");
              }
          }
-         
+
      };
 
      var animateVisitCounter = function() {
@@ -95,7 +117,7 @@
          }
      };
 
-    
+
 
      var setupCounter = function() {
          $(".counter").html(parseInt($("#stat").text(), 10));
@@ -118,9 +140,15 @@
 
      LateBloomers.initialiseOwlCarousel();
      LateBloomers.openNewsletterForm();
-     
+
      $(window).scroll(function() {
          LateBloomers.fixedHeaderAnimation();
+     });
+     
+     $("#getStarted").on("click", function(){
+        var owl = $("#questionaire").data('owlCarousel');
+        owl.next();
+
      });
  });
 
@@ -165,5 +193,3 @@
          }
      }
  })();
-
-
