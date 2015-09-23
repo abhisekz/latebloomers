@@ -63,22 +63,26 @@
             </div>
         </div>
     </footer>
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      Launch demo modal
-    </button>
+    
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Modal title</h4>
+                <h4 class="modal-title">Test your addiction?</h4>
               </div>
           <div class="modal-body">
-            <?php include '/qna.php'; ?>
+            <?php include 'qna.php'; ?>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="row">
+                <div class="progress" id="progress1">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">                
+                    </div>
+                    
+                    <span class="progress-completed">0%</span>
+                </div>      
+            </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Quit test</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->

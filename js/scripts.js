@@ -60,7 +60,7 @@
              }
          });
          $('#myModal').on('shown.bs.modal', function(e) {
-             $("#questionaire").owlCarousel({
+             /*$("#questionaire").owlCarousel({
                  responsive: {
                      0: {
                          items: 1,
@@ -76,7 +76,7 @@
                          loop: false
                      }
                  }
-             });
+             });*/
 
          })
          
@@ -193,3 +193,74 @@
          }
      }
  })();
+
+
+ $(function() {
+    var count = 1,
+        meter = 0,
+        resultTxt = ['You probably have a drinking or drug problem.',
+                     'You may be in an early stage of alcoholism or drug addiction.',
+                     'You may be in the second stage of alcoholism or drug addiction.',
+                     'You may be in end-stage alcoholism or drug addiction.'];
+
+    $(".progress-bar").css("width", 0 + "%");
+
+    $('#slide-'+count).show(function(){
+        count++;
+    });
+
+    $('#next').on('click', function(){
+        $('#slide-'+parseInt(count-1,10)).addClass('visited');
+        $('#slide-'+parseInt(count-1,10)).removeClass('active');
+        $('#slide-'+count).addClass('active');
+        count++;
+        resetActive(count-1);
+    });
+
+    $('.option').on('click', function(){
+        meter += parseInt($(this).val(),10);
+        $('#slide-'+parseInt(count-1,10)).addClass('visited');
+        $('#slide-'+parseInt(count-1,10)).removeClass('active');
+        $('#slide-'+count).addClass('active');
+        count++;
+        resetActive(count-1);
+        if( meter == 3){
+            result = resultTxt[0];
+        } else if (meter >= 4 && meter <= 7) {
+            result = resultTxt[1];
+        } else if (meter >= 8 && meter <= 10) {
+            result = resultTxt[2];
+        } else if (meter > 10) {
+            result = resultTxt[3];
+        } 
+        $('.result').html(result);
+    });
+
+ });
+function resetActive(count) {
+    var present_count = parseInt(count-1);
+    var percent = parseInt((present_count / 20 * 100),10);
+    if( percent <= 100 ){
+        $(".progress-bar").css("width", percent + "%");
+        $(".progress-completed").text(percent + "%");
+    } else {
+        $("#progress1").hide();
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

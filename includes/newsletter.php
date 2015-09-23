@@ -35,7 +35,7 @@
             </div>
             <div class="extra-section">
                 <section>
-                    <a class="box" onclick='sweetAlert("Oops...", "This page is not yet ready!", "error")'>
+                    <a class="box" data-toggle="modal" href="#myModal">
                         <i class="user"></i>
                         <h2>Are you addicted ? </h2>
                     </a>
