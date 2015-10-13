@@ -6,11 +6,15 @@
 		repeat : repeat-x;
 		position: 25% bottom;
 	}
-	padding: 2em 0;
-	@media (min-width: $screen-sm-min){
-		padding: 8em 0;
-	}
+	padding: 3em 0;
 	text-align: center;
+
+	
+	
+	@media (min-width: $screen-sm-min){
+		padding: 5em 0 2em;
+	}
+
 	h2 {
 		font-size: 1.5em;
 		@media (min-width: $screen-sm-min){
@@ -32,4 +36,11 @@
 	.owl-controls {
 		display: none;
 	}
+}
+.home #banner {
+	background: {
+		color: transparent;
+		image : none;
+	}
+
 }

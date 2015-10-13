@@ -14,18 +14,21 @@
     <section id="banner">
         <div class="container">
             <div class="owl-carousel">
+                
+                
                 <div class="slide">
-                    <h2>Obstacles can’t stop you, problems can’t stop you, and most of all other people can’t stop you.</h2>
-                    <p>The only one who stops you is yourself.</p>
+                    <h2>“Change only take place through action, not through meditation and prayer alone.”</h2>
+                    <p>- Dalai Lama</p>
                 </div>
                 <div class="slide">
                     <h2>I seek strength, not to be greater than others,</h2>
                     <p>but to fight my greatest enemy, the doubts within myself.</p>
                 </div>
                 <div class="slide">
-                    <h2>“Change only take place through action, not through meditation and prayer alone.”</h2>
-                    <p>- The Dalai Lama</p>
+                    <h2>Obstacles can’t stop you, problems can’t stop you, and most of all other people can’t stop you.</h2>
+                    <p>The only one who stops you is yourself.</p>
                 </div>
+
                 <div class="slide">
                     <h2>Don’t carry your mistakes around with you,</h2>
                     <p>Instead, place them under your feet and use them as stepping stones to rise above them.</p>
@@ -60,7 +63,7 @@
                             <i></i>
                             <h2>What we do</h2>
                             <p>
-                                Pre admission counselling by psychologist/psychotherapists
+                                Pre admission counselling by psychologist/psychotherapists.
                                 <br/> Detoxification by qualified multi disciplinary doctors and other medical professionals.
                                 <br> Rehabilitation through psychotherapy group therapy, Occupational therapy, vocational training and placement.
                             </p>

@@ -7,6 +7,7 @@
     border-radius: 0;
     margin-bottom: 0;
     width: 100%;
+    position: relative;
     a {
         color: #ffffff;
         display: inline-block;
@@ -15,7 +16,6 @@
         text-decoration: none;
         text-indent: -0.05em;
         text-transform: uppercase;
-
         span {
             font-size: .6em;
             display: block;
@@ -23,18 +23,41 @@
             @media (min-width: $screen-md-min) {
                 margin: 0px 0 0;
             }
-            color: rgba(255,255,255,.5);
+            color: rgba(255, 255, 255, .5);
             font-weight: 300;
         }
     }
-   
+    .logo-img {
+        position: absolute;
+        top: 10px;
+        img {
+            width: 75px;
+        }
+        @media (max-width: $screen-xs-max) {
+            display: none;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            top: 24px;
+            img {
+                width: 50px;
+            }
+        }
         
+    }
+    .logo {
+        @media (min-width: $screen-md-min) {
+            margin-left: 80px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            margin-left: 54px;
+        }
+
+    }
     h1.navbar-brand {
         margin: 0;
         @media (max-width: $screen-xs-max) {
-                padding-top: 0;
-            }
-        
+            padding-top: 0;
+        }
         font-size: 22px;
         a {
             padding: 0;
@@ -42,27 +65,60 @@
         @media (min-width: $screen-md-min) {
             font-size: 30px;
         }
-        
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            font-size: 20px;
+        }        
     }
-    
 }
 
- 
+.home .header-wrap {
+    background: rgba(0, 0, 0, .1);
+}
+
 .header-wrap.sticky {
     position: fixed;
     width: 100%;
     z-index: 100;
     opacity: .9;
     padding: 0;
-    top:0;
+    top: 0;
+    background-color: $header-color;
     h1 {
         margin-bottom: 0;
         font-size: 22px;
-        @media (max-width: $screen-xs-max){
+        @media (max-width: $screen-xs-max) {
             padding: 5px 15px;
         }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            font-size: 18px;
+        }
     }
-} 
+    .logo-img {
+        position: absolute;
+        top: 4px;
+        @media (max-width: $screen-xs-max) {
+            display: none;
+        }
+        img {
+            width: 60px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            top: 11px;
+            img {
+                width: 45px;
+            }
+        }
+    }
+    .logo {
+        @media (min-width: $screen-md-min) {
+            margin-left: 70px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            margin-left: 50px;
+        }
+    }
+}
+
 .extra-section {
     @extend .row;
 }

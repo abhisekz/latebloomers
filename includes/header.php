@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                 </button>
                
-                    <h1 class="navbar-brand"><a href="<?php echo $baseUrl; ?>" class="logo">Late Bloomers <span>Rehabiliation Centre</span></a></h1>
+                    <h1 class="navbar-brand"><a href="<?php echo $baseUrl; ?>" class="logo-img"><img src="<?php echo $baseUrl; ?>/images/logo_v1.png" alt="" width="120"></a><a href="<?php echo $baseUrl; ?>" class="logo">Late Bloomers <span>Rehabiliation Centre</span></a></h1>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">

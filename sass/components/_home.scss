@@ -1,3 +1,19 @@
+.home {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: 92% 0;
+    background-size: 100% 20%;
+    @media (max-width: $screen-xs-max) {
+        background: {
+            position: 92% 0;
+            size: 374% 9%;
+        }
+        
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        background-size: 180% 13%;
+    }
+}
 .into-section {
     .container {
         padding: 20px 0;
