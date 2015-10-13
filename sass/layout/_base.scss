@@ -294,7 +294,76 @@
 }
 
 
-
+.box-child {
+    background: #fff;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+    padding: 30px 30px 80px;
+    text-align: center;
+    margin-bottom: 30px;
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        min-height: 430px;
+    }
+    @media (min-width: $screen-lg-min) {
+        min-height: 430px;
+    }
+    i {
+        background-color: $primary-color;
+        border-radius: 100%;
+        color: $white;
+        cursor: default;
+        display: block;
+        height: 150px;
+        line-height: 66px;
+        margin: 0 auto 1.5em auto;
+        text-align: center;
+        width: 150px;
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 0%);
+        font-size: 30px;
+        
+        box-shadow: 4px 7px 9px rgba(0,0,0,0.2);
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    ul {
+        @include reset-list;
+    }
+    a {
+    	    position: absolute;
+		    bottom: 29px;
+		    border-radius: 0;
+		    left: 15px;
+		    right: 15px;
+		    line-height: 45px;
+		    @media (max-width: $screen-xs-max) {
+		        bottom: 0;
+		    }
+    }
+    .well {
+    	background-color: #f5f5f5;
+    border: 0;
+    border-radius: 0;
+    margin: 20px 0;
+    }
+    .more {
+    		display: none;
+    	}
+    	.less {
+    		display: inline;
+    	}
+    .collapsed {
+    	.more {
+    		display: inline;
+    	}
+    	.less {
+    		display: none;
+    	}
+    }
+}
 
 
 

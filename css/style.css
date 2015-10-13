@@ -9202,6 +9202,82 @@ h1, h2, #counter, h3, h4, h5, h6 {
   background-color: #BF1F35;
 }
 
+.box-child {
+  background: #fff;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  padding: 30px 30px 80px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .box-child {
+    min-height: 430px;
+  }
+}
+@media (min-width: 1200px) {
+  .box-child {
+    min-height: 430px;
+  }
+}
+.box-child i {
+  background-color: #e96c77;
+  border-radius: 100%;
+  color: #ffffff;
+  cursor: default;
+  display: block;
+  height: 150px;
+  line-height: 66px;
+  margin: 0 auto 1.5em auto;
+  text-align: center;
+  width: 150px;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 0%);
+  font-size: 30px;
+  box-shadow: 4px 7px 9px rgba(0, 0, 0, 0.2);
+}
+.box-child h2, .box-child #counter {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+.box-child p {
+  margin-bottom: 0;
+}
+.box-child ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.box-child a {
+  position: absolute;
+  bottom: 29px;
+  border-radius: 0;
+  left: 15px;
+  right: 15px;
+  line-height: 45px;
+}
+@media (max-width: 767px) {
+  .box-child a {
+    bottom: 0;
+  }
+}
+.box-child .well {
+  background-color: #f5f5f5;
+  border: 0;
+  border-radius: 0;
+  margin: 20px 0;
+}
+.box-child .more {
+  display: none;
+}
+.box-child .less {
+  display: inline;
+}
+.box-child .collapsed .more {
+  display: inline;
+}
+.box-child .collapsed .less {
+  display: none;
+}
+
 .content-area {
   background: #fff;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
