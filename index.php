@@ -72,7 +72,7 @@
                     <section>
                         <div class="box why-there">
                             <i></i>
-                            <h2>Why we are there</h2>
+                            <h2>Why we are here</h2>
                             <p>
                                 To facilitate the awareness among people regarding the menace of addiction.
                                 <br> To offer a holistic solution to the problem of addiction encamp using treatment, rehabilitation, after care and follow-up services

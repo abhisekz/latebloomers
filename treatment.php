@@ -111,19 +111,19 @@
                             <p>This phase is characterized by noticeable physical, mental and social deterioration. There is a total breakdown in relationship with the family.</p>
                             <ul>
                                 <li>
-                                    <h5>o   Binge Drinking/Insane Drug using:</h5>
+                                    <h5>Binge Drinking/Insane Drug using:</h5>
                                     <p>The person drinks/uses continuously for days together, does not eat and does not involve oneself in any other activity. At the end of each binge one are left shaken, frightened and guilt-ridden; one promise never to drink/use again. Soon enough one go on another binge.</p>
                                 </li>
                                 <li>
-                                    <h5>o   Ethical Breakdown :</h5>
+                                    <h5>Ethical Breakdown :</h5>
                                     <p>The addict borrows, lies and even steals to keep liquor/drug in supply. The person has no qualms about being unethical. The sole aim is to get enough to drink/drug whatever the means. E.g. A patient would tell his neighbor he needs money to pay the person who has brought the cooking gas.</p>
                                 </li>
                                 <li>
-                                    <h5>o   Paranoia and Hallucinations:</h5>
+                                    <h5>Paranoia and Hallucinations:</h5>
                                     <p>The addict begins to suspect people around with little reason. Getting paranoid that all his wealth will be robbed. He imagines they are plotting against him. One may imagine voices speaking to. He may see things that do not exist or may feel things crawling on you. E. g. A patient I came across after long term consumption began feeling that if a small group of people unknown to him gather near him then they are definitely talking about him.</p>
                                 </li>
                                 <li>
-                                    <h5>o   Lack of Motor Co-Ordination:</h5>
+                                    <h5>Lack of Motor Co-Ordination:</h5>
                                     <p>The next day morning it feels like a sledgehammer in the head-hangover and one feels miserable, the body shaking,the hand trembles as one holds the coffee mug. To feel “ normal” one has to down a few drinks or use drugs. The drink or drug that made one feel better and enhanced a normal state of being now made one feel only pain and the ‘choice’ to use is taken away and ‘compulsion’ and ‘need’ to use to avoid pain takes over.<br>
                                     Just as motor coordination is affected all other bodily systems are slowly and steadily affected with continued use of the substance from the liver, GIT, Renal system, reproductive system, brain everything eventually lose their normal functionality and get damaged. Mood swings result, control over rationalized ways of behaving are lost due to the substance.This is the end of the road. Those who do not stop alcohol/drugs consumption even at this stage get mentally ill or die a slow, painful death.
                                     </p>

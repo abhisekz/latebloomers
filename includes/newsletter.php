@@ -57,7 +57,11 @@
     </aside>
     <div id="counter">
         <div class="container">
-             Visitors:&nbsp;<span class="count">
+        	<div class="col-sm-6 text-left">
+        		<a href="http://deaddictioncentres.in/rehabcentre/late-bloomers-rehabilitation-centre/" target="blank" title="View Late Bloomers Rehabilitation Centre at DeAddictionCentres.IN, India&#39;s most comprehensive de-addiction resource" alt="View Late Bloomers Rehabilitation Centre at DeAddictionCentres.IN, India&#39;s most comprehensive de-addiction resource"><img src="http://deaddictioncentres.in/badges/badgewithtab125.png"  height="70px" alt="Late Bloomers Rehabilitation Centre is a DeAddictionCentres.IN directory member"/></a>
+        	</div>
+        	<div class="col-sm-6">
+        		Visitors:&nbsp;<span class="count">
                 <!-- Start of StatCounter Code for Default Guide -->
                 <script type="text/javascript">
                 var sc_project=10383727; 
@@ -78,6 +82,7 @@
                 alt="shopify analytics ecommerce
                 tracking"></a></div></noscript>
                 <!-- End of StatCounter Code for Default Guide -->
-            </span>
+            	</span>
+        	</div>
         </div>
     </div>

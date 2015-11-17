@@ -199,9 +199,10 @@
     var count = 1,
         meter = 0,
         resultTxt = ['You probably have a drinking or drug problem.',
-                     'You may be in an early stage of alcoholism or drug addiction.',
-                     'You may be in the second stage of alcoholism or drug addiction.',
-                     'You may be in end-stage alcoholism or drug addiction.'];
+                     'This is high time that you seek a treatment. The chances of getting rid of active addiction are very high at this stage',
+                     'Unless you are alert now and take a treatment immediately you might end up your life in a disastrous way.',
+                     'Only an immediate intervention by highly qualified and skilled medical professionals along with a knowledgeable support group can restore you to sanity. ',
+                     'Though still now you cannot be termed as an alcoholic but remember there is a high percentage turns into chronic alcoholic from this occasional drinking habit.'];;
 
     $(".progress-bar").css("width", 0 + "%");
 
@@ -232,7 +233,9 @@
             result = resultTxt[2];
         } else if (meter > 10) {
             result = resultTxt[3];
-        } 
+        } else {
+            result = resultTxt[4];
+        }
         $('.result').html(result);
     });
 

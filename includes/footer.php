@@ -38,7 +38,7 @@
                 
                     <div>
                         <i class="fa fa-envelope"></i>
-                        <p><a href="mailto:contact@latebloomersrehab.com">contact@latebloomersrehab.com</a></p>
+                        <p><a href="mailto:contact@latebloomersrehab.org">contact@latebloomersrehab.org</a></p>
                     </div>
                 
                 </div>

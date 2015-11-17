@@ -154,7 +154,7 @@
                                         </div>
                                         <div>
                                             <i class="fa fa-envelope"></i>
-                                            <p><a href="mailto:support@latebloomersrehab.com">support@latebloomersrehab.com</a></p>
+                                            <p><a href="mailto:contact@latebloomersrehab.org">contact@latebloomersrehab.org</a></p>
                                         </div>
                                     </section>
                                 </address>
